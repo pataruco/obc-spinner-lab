@@ -52,6 +52,14 @@ svg {
 
 /* SVG Spinner with checkmark*/
 
+.checkmarkWrapper {
+  width: 100px;
+}
+
+.checkmark {
+  fill: green;
+}
+
 @keyframes progress {
   from {
     stroke: red;
