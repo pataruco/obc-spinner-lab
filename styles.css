@@ -4,7 +4,7 @@
 
 body {
   font-family: sans-serif;
-  --svg-radius: 47;
+  --svg-radius: 25;
   /* Set the value of dasharray of the lenght of the circumference */
   /* 2 * π * Radius  = C */
   --stroke-dasharray: calc((2 * var(--svg-radius)) * 3.14 );
@@ -29,9 +29,12 @@ svg {
 .svgSpinner {
   fill: transparent;
   stroke: red;
-  stroke-width: 3px;
   stroke-dasharray: var(--stroke-dasharray);
   stroke-dashoffset: var(--stroke-dashoffset);
+}
+
+.circleWrapper {
+  transform-origin: center;
 }
 
 .rotate {
@@ -50,19 +53,29 @@ svg {
 }
 
 /* SVG Spinner with checkmark*/
+/* All together */
 
-.checkmarkWrapper {
-  width: 100px;
+.svgCheckmarkSpinnerWrapper {
+  width: 200px;
 }
 
-.checkmark {
-  fill:none;
+.svgCheckmarkSpinnerSvg {
+  fill: transparent;
+  stroke: red;
+  stroke-dasharray: var(--stroke-dasharray);
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+
+.svgCheckmarkSpinnerCircle {
   stroke: green;
-  stroke-width:10;
-  stroke-dasharray: 200px;
-  stroke-dashoffset: 200px;
-  animation: check 1s linear forwards;
+  fill: none;
 }
+
+.svgCheckmarkSpinnerPath {
+  fill: none;
+  stroke: green;
+}
+
 
 @keyframes progress {
   from {
