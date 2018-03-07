@@ -50,6 +50,8 @@ svg {
              progress 1s forwards ease-in;
 }
 
+/* SVG Spinner with checkmark*/
+
 @keyframes progress {
   from {
     stroke: red;
