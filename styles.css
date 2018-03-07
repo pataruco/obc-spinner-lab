@@ -53,7 +53,6 @@ svg {
 @keyframes progress {
   from {
     stroke: red;
-    stroke-dashoffset: 295.309;
   }
   to {
     stroke: green;
