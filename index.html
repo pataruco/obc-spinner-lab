@@ -8,12 +8,32 @@
   <body>
 
     <section>
-      <h2>SVG</h2>
+      <h2>Base spinner</h2>
       <div class="svgSpinnerWrapper">
-        <svg viewBox="0 0 100 100" class="svgSpinner">
+        <svg viewBox="0 0 100 100" class="svgSpinner rotate" id="js-svg">
             <circle cx="50" cy="50" r="47" />
         </svg>
       </div>
+      <a href="#" id="js-button" class="button">Sucess</a>
     </section>
+    <section>
+      <h2>Spinner with checkmark</h2>
+      <div class="svgSpinnerWrapper">
+        <svg viewBox="0 0 100 100" class="svgSpinner rotate" id="js-svg-checkmark">
+            <circle cx="50" cy="50" r="47" />
+        </svg>
+      </div>
+      <a href="#" id="js-button-checkmark" class="button">Sucess</a>
+    </section>
+
+    <section>
+      <div class="checkmarkWrapper">
+        <svg viewBox="0 0 100 100" class="checkmark">
+          <polyline class="check"  points="15,60 40,80 85,20" />
+        </svg>
+      </div>
+    </section>
+
+    <script src="./scripts.js" charset="utf-8"></script>
   </body>
 </html>
