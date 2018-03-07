@@ -8,13 +8,12 @@
   width: 200px;
 }
 
-.svgSpinnerWrapper svg {
+
+.svgSpinner {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.svgSpinner {
+  animation: svgRotate 2s infinite linear;
   fill: transparent;
   stroke: red;
   stroke-width: 3px;
@@ -23,14 +22,26 @@
   /* C * (1 - 0.75) =  circle - 25% */
   /* 295.309 * (1 - 0.75) */
   stroke-dashoffset: 73.82725;
-  animation: svgRotate 2s infinite linear;
+}
+
+.button {
+  display: block;
+  margin-top: 50px;
+  color: black;
+}
+
+.svgSpinner.success {
+  animation: svgRotate 2s forwards linear,
+             progress 1s forwards ease-in;
 }
 
 @keyframes progress {
   from {
+    stroke: red;
     stroke-dashoffset: 295.309;
   }
   to {
+    stroke: green;
     stroke-dashoffset: 0;
   }
 }
