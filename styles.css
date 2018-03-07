@@ -20,8 +20,10 @@
   stroke-width: 3px;
   /* 2 * π * R  = C */
   stroke-dasharray: 295.309;
-  stroke-dashoffset: 295.309;
-  animation: progress 2s infinite alternate, svgRotate 2s infinite linear;
+  /* C * (1 - 0.75) =  circle - 25% */
+  /* 295.309 * (1 - 0.75) */
+  stroke-dashoffset: 73.82725;
+  animation: svgRotate 2s infinite linear;
 }
 
 @keyframes progress {
