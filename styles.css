@@ -4,8 +4,8 @@
 
 body {
   font-family: sans-serif;
-  --svg-radius: 25;
-  /* Set the value of dasharray of the lenght of the circumference */
+  --svg-radius: 24;
+  /* Set the value of dasharray to be the length of the circumference */
   /* 2 * π * Radius  = C */
   --stroke-dasharray: calc((2 * var(--svg-radius)) * 3.14 );
   /* Remove a percentage value from circumference */
@@ -78,8 +78,6 @@ svg {
 .svgCheckmarkSpinnerPath {
   fill: none;
   stroke: transparent;
-  stroke-dasharray: var(--stroke-dasharray);
-  stroke-dashoffset: var(--stroke-dashoffset);
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
 }
@@ -110,12 +108,6 @@ svg {
 
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes check {
-  to {
-    stroke-dashoffset: 0;
   }
 }
 
