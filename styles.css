@@ -30,7 +30,6 @@ svg {
   fill: transparent;
   stroke: red;
   stroke-width: 3px;
-  stroke-dasharray: 295.309;
   stroke-dasharray: var(--stroke-dasharray);
   stroke-dashoffset: var(--stroke-dashoffset);
 }
@@ -57,7 +56,12 @@ svg {
 }
 
 .checkmark {
-  fill: green;
+  fill:none;
+  stroke: green;
+  stroke-width:10;
+  stroke-dasharray: 200px;
+  stroke-dashoffset: 200px;
+  animation: check 1s linear forwards;
 }
 
 @keyframes progress {
@@ -77,5 +81,11 @@ svg {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes check {
+  to {
+    stroke-dashoffset: 0;
   }
 }
