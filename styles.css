@@ -29,12 +29,15 @@ svg {
 .svgSpinner {
   fill: transparent;
   stroke: red;
-  stroke-dasharray: var(--stroke-dasharray);
-  stroke-dashoffset: var(--stroke-dashoffset);
 }
 
 .circleWrapper {
   transform-origin: center;
+}
+
+.svgSpinnerCircle {
+  stroke-dasharray: var(--stroke-dasharray);
+  stroke-dashoffset: var(--stroke-dashoffset);
 }
 
 .rotate {
@@ -47,9 +50,8 @@ svg {
   color: black;
 }
 
-.svgSpinner.success {
-  animation: svgRotate 2s infinite linear,
-             progress 1s forwards ease-in;
+.svgSpinner.success .svgSpinnerCircle {
+  animation: progress 1s forwards ease-in;
 }
 
 /* SVG Spinner with checkmark*/
