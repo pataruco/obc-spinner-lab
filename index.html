@@ -8,7 +8,16 @@
   <body>
 
     <section>
-      <h2>SVG</h2>
+      <h2>Base spinner</h2>
+      <div class="svgSpinnerWrapper">
+        <svg viewBox="0 0 100 100" class="svgSpinner rotate" id="js-svg">
+            <circle cx="50" cy="50" r="47" />
+        </svg>
+      </div>
+      <a href="#" id="js-button" class="button">Sucess</a>
+    </section>
+    <section>
+      <h2>Spinner with checkmark</h2>
       <div class="svgSpinnerWrapper">
         <svg viewBox="0 0 100 100" class="svgSpinner" id="js-svg">
             <circle cx="50" cy="50" r="47" />
@@ -16,6 +25,7 @@
       </div>
       <a href="#" id="js-button" class="button">Sucess</a>
     </section>
+
     <script src="./scripts.js" charset="utf-8"></script>
   </body>
 </html>

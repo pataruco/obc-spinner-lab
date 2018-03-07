@@ -2,26 +2,41 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+  --svg-radius: 47;
+  /* Set the value of dasharray of the lenght of the circumference */
+  /* 2 * π * Radius  = C */
+  --stroke-dasharray: calc((2 * var(--svg-radius)) * 3.14 );
+  /* Remove a percentage value from circumference */
+  /* C * (1 - 0.75) =  circle - 25% */
+  --stroke-dashoffset: calc(var(--stroke-dasharray) * (1 - 0.75));
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
 /* SVG Spinner */
 
 .svgSpinnerWrapper {
   width: 200px;
 }
 
-
 .svgSpinner {
-  display: block;
-  width: 100%;
-  height: auto;
-  animation: svgRotate 2s infinite linear;
   fill: transparent;
   stroke: red;
   stroke-width: 3px;
-  /* 2 * π * R  = C */
   stroke-dasharray: 295.309;
-  /* C * (1 - 0.75) =  circle - 25% */
-  /* 295.309 * (1 - 0.75) */
-  stroke-dashoffset: 73.82725;
+  stroke-dasharray: var(--stroke-dasharray);
+  stroke-dashoffset: var(--stroke-dashoffset);
+}
+
+.rotate {
+  animation: svgRotate 2s infinite linear;
 }
 
 .button {
@@ -31,7 +46,7 @@
 }
 
 .svgSpinner.success {
-  animation: svgRotate 2s forwards linear,
+  animation: svgRotate 2s infinite linear,
              progress 1s forwards ease-in;
 }
 
