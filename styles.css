@@ -65,7 +65,7 @@ svg {
 .svgCheckmarkSpinnerSvg {
   fill: transparent;
   stroke: red;
-  stroke-width: 2px;
+  stroke-width: 3px;
 }
 
 .svgCheckmarkSpinnerCircle {
