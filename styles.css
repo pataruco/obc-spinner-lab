@@ -19,7 +19,6 @@ svg {
   height: auto;
 }
 
-
 /* SVG Spinner */
 
 .svgSpinnerWrapper {
@@ -27,9 +26,9 @@ svg {
 }
 
 .svgSpinner {
-  fill: transparent;
+  fill: none;
   stroke: red;
-  stroke-width: 3px;
+  stroke-width: 3;
 }
 
 .circleWrapper {
@@ -39,6 +38,7 @@ svg {
 .svgSpinnerCircle {
   stroke-dasharray: var(--stroke-dasharray);
   stroke-dashoffset: var(--stroke-dashoffset);
+  transition: all 1s ease-in;
 }
 
 .rotate {
@@ -52,7 +52,8 @@ svg {
 }
 
 .svgSpinner.success .svgSpinnerCircle {
-  animation: progress 1s forwards ease-in;
+  stroke: green;
+  stroke-dashoffset: 0;
 }
 
 /* SVG Spinner with checkmark*/
@@ -63,57 +64,34 @@ svg {
 }
 
 .svgCheckmarkSpinnerSvg {
-  fill: transparent;
+  fill: none;
   stroke: red;
-  stroke-width: 3px;
+  stroke-width: 3;
 }
 
 .svgCheckmarkSpinnerCircle {
   stroke: red;
-  fill: none;
   stroke-dasharray: var(--stroke-dasharray);
   stroke-dashoffset: var(--stroke-dashoffset);
+  transition: all 1s ease-in;
 }
 
 .svgCheckmarkSpinnerPath {
-  fill: none;
   stroke: transparent;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
+  transition: all 1s ease-in 1s;
 }
 
-.svgCheckmarkSpinnerSvg.success .svgCheckmarkSpinnerCircle {
-  animation: progress 1s forwards ease-in;
-}
-
+.svgCheckmarkSpinnerSvg.success .svgCheckmarkSpinnerCircle,
 .svgCheckmarkSpinnerSvg.success .svgCheckmarkSpinnerPath {
-  animation: checkmark 1s forwards 1s ease-in;
+  stroke: green;
+  stroke-dashoffset: 0;
 }
 
-
-@keyframes progress {
-  from {
-    stroke: red;
-  }
-  to {
-    stroke: green;
-    stroke-dashoffset: 0;
-  }
-}
 
 @keyframes svgRotate {
-  from {
-    transform: rotate(0deg);
-  }
-
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes checkmark {
-  to {
-    stroke: green;
-    stroke-dashoffset: 0;
   }
 }
