@@ -1,16 +1,16 @@
-const svg = document.getElementById('js-svg');
-const button = document.getElementById('js-button');
+var svg = document.getElementById('js-svg');
+var button = document.getElementById('js-button');
 
-const svgCheckmark = document.getElementById('js-svg-checkmark');
-const buttonCheckmark = document.getElementById('js-button-checkmark');
+var svgCheckmark = document.getElementById('js-svg-checkmark');
+var buttonCheckmark = document.getElementById('js-button-checkmark');
 
 
-const showSuccess = (event) => {
+var showSuccess =  function (event)  {
   event.preventDefault();
   svg.classList.add('success');
 }
 
-const showSuccessCheckmark = (event) => {
+var showSuccessCheckmark =  function (event)  {
   event.preventDefault();
   svgCheckmark.classList.add('success');
 }
