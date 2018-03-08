@@ -39,6 +39,7 @@ svg {
 .svgSpinnerCircle {
   stroke-dasharray: var(--stroke-dasharray);
   stroke-dashoffset: var(--stroke-dashoffset);
+  transition: all 1s ease-in;
 }
 
 .rotate {
@@ -52,7 +53,9 @@ svg {
 }
 
 .svgSpinner.success .svgSpinnerCircle {
-  animation: progress 1s forwards ease-in;
+  /* animation: progress 1s forwards ease-in; */
+  stroke: green;
+  stroke-dashoffset: 0;
 }
 
 /* SVG Spinner with checkmark*/
