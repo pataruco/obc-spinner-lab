@@ -120,12 +120,32 @@ svg {
   stroke: transparent;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
-  transition: all 1s ease-in 1s;  
+  transition: all 1s ease-in 2s;  
 }
 
-.buttonSpinnerSvg.success .buttonSpinnerCircle,
+.buttonSpinnerSvg.success .buttonSpinnerCircle {
+  animation: success 2s ease-in forwards;
+}
+
+
 .buttonSpinnerSvg.success .buttonSpinnerCheckmark {
   stroke: green;
   stroke-dashoffset: 0;
+}
+
+@keyframes success {
+  50% {
+    stroke: green;
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke: transparent;
+  }
+
+  to {
+    stroke: transparent;
+    stroke-dashoffset: 0;
+  }
 }
 

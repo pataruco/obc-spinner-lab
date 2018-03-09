@@ -37,9 +37,37 @@ checkmark.addEventListener('transitionend', (event) =>{
 
 const triggerButton = document.getElementById('js-button-buttonspinner');
 const buttonSpinnerSvg = document.getElementById('js-svg-buttonspinner');
+const buttonSpinnerList = document.getElementById('js-buttonspinner-list');
 
 
 triggerButton.addEventListener('click', (event) => {
   event.preventDefault();
   buttonSpinnerSvg.classList.add('success');
 })
+
+// animation listener
+
+const buttonSpinnerCircle = document.getElementById('js-svg-circle-buttonspinner');
+const buttonSpinnerCheckmark = document.getElementById('js-svg-checkmark-buttonspinner');
+
+
+buttonSpinnerCircle.addEventListener('animationend', (event) =>{
+  console.log('CIRCLE animationend ===>', event )
+  const eventString = JSON.stringify(event);
+  const listItem = document.createElement('li')
+  const message = document.createTextNode(`CIRCLE animationend ===> ${event}`);
+  listItem.appendChild(message);
+  buttonSpinnerList.appendChild(listItem);
+});
+
+
+// transition listener
+
+buttonSpinnerCheckmark.addEventListener('transitionend', (event) => {
+  console.log('Checkmark transitionend ===>', event )
+  const eventString = JSON.stringify(event);
+  const listItem = document.createElement('li')
+  const message = document.createTextNode(`Checkmark transitionend ===> ${event}`);
+  listItem.appendChild(message);
+  buttonSpinnerList.appendChild(listItem);
+});
