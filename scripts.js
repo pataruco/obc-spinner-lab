@@ -63,11 +63,11 @@ buttonSpinnerCircle.addEventListener('animationend', (event) =>{
 
 // transition listener
 
-buttonSpinnerCheckmark.addEventListener('transitionend', (event) => {
-  console.log('Checkmark transitionend ===>', event )
+buttonSpinnerCheckmark.addEventListener('animationend', (event) => {
+  console.log('Checkmark animationend ===>', event )
   const eventString = JSON.stringify(event);
   const listItem = document.createElement('li')
-  const message = document.createTextNode(`Checkmark transitionend ===> ${event}`);
+  const message = document.createTextNode(`Checkmark animationend ===> ${event}`);
   listItem.appendChild(message);
   buttonSpinnerList.appendChild(listItem);
 });

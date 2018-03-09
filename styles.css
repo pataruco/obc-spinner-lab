@@ -113,27 +113,26 @@ svg {
   stroke: red;
   stroke-dasharray: var(--stroke-dasharray);
   stroke-dashoffset: var(--stroke-dashoffset);
-  transition: all 1s ease-in; 
 }
 
 .buttonSpinnerCheckmark {
   stroke: transparent;
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
-  transition: all 1s ease-in 2s;  
+  /*transition: all 1s ease-in 2s;  */
 }
 
 .buttonSpinnerSvg.success .buttonSpinnerCircle {
-  animation: success 2s ease-in forwards;
+  animation: fullcircle 2s ease-in forwards;
 }
 
 
 .buttonSpinnerSvg.success .buttonSpinnerCheckmark {
-  stroke: green;
-  stroke-dashoffset: 0;
+  animation: checkmark 2s ease-in 2s forwards;
 }
 
-@keyframes success {
+
+@keyframes fullcircle {
   50% {
     stroke: green;
     stroke-dashoffset: 0;
@@ -149,3 +148,9 @@ svg {
   }
 }
 
+@keyframes checkmark {
+  to{
+  stroke: green;
+  stroke-dashoffset: 0;
+  }
+}
