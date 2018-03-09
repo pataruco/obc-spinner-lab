@@ -95,3 +95,37 @@ svg {
     transform: rotate(360deg);
   }
 }
+
+
+/*Button Spinner*/
+
+.buttonSpinnerWrapper {
+  width: 200px;
+}
+
+.buttonSpinnerSvg {
+  fill: none;
+  stroke: red;
+  stroke-width: 3; 
+}
+
+.buttonSpinnerCircle {
+  stroke: red;
+  stroke-dasharray: var(--stroke-dasharray);
+  stroke-dashoffset: var(--stroke-dashoffset);
+  transition: all 1s ease-in; 
+}
+
+.buttonSpinnerCheckmark {
+  stroke: transparent;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  transition: all 1s ease-in 1s;  
+}
+
+.buttonSpinnerSvg.success .buttonSpinnerCircle,
+.buttonSpinnerSvg.success .buttonSpinnerCheckmark {
+  stroke: green;
+  stroke-dashoffset: 0;
+}
+
