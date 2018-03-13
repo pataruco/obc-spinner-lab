@@ -20,8 +20,24 @@ svg {
   height: auto;
 }
 
+.pageWrapper {
+  width: 75vw;
+  height: 75vh;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
 .loadingWrapper {
-  padding: 180px 16px 0;;
+  padding: 180px 16px 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(256,256,256,.75);
+  display: none;
 }
 
 .spinnerWraper {
@@ -66,6 +82,10 @@ svg {
   text-align: center;
 }
 
+.loadingWrapper.loading {
+  display: block;  
+}
+
 .loadingWrapper.success .circle {
   animation: success 1s ease-in forwards;
 }
@@ -77,8 +97,8 @@ svg {
 
 @keyframes success {
   to {
-      stroke: green;
-      stroke-dashoffset: 0;
+    stroke: green;
+    stroke-dashoffset: 0;
   }
 }
 

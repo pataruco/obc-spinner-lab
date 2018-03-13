@@ -7,24 +7,30 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main class="loadingWrapper" id="js-loading-wrapper">
-    <div class="spinnerWraper">
-      <svg viewBox="0 0 52 52" class="spinner" id="">
-        <g class="circleWrapper rotate">
-          <circle cx="26" cy="26" r="24" class="circle" id=""></circle>
-        </g>
-        <g class="checkmarkWrapper">
-          <path d="M14.1 27.2l7.1 7.2 16.7-16.8" class="checkmark" id="js-checkmark"></path>
-        </g>
-      </svg>
-    </div>
-    <h1 class="title">Loading</h1>
-    <p class="message">We're just checking your details, this should only take a few seconds</p>
-  </main>
-  <aside>
-    <button id="js-button">Success</button>
+  <div class="pageWrapper">
+    <main class="page">
+      <h2> I am a page</h2>
+    </main>
+    <aside class="loadingWrapper" id="js-loading-wrapper">
+      <div class="spinnerWraper">
+        <svg viewBox="0 0 52 52" class="spinner" id="">
+          <g class="circleWrapper rotate">
+            <circle cx="26" cy="26" r="24" class="circle" id=""></circle>
+          </g>
+          <g class="checkmarkWrapper">
+            <path d="M14.1 27.2l7.1 7.2 16.7-16.8" class="checkmark" id="js-checkmark"></path>
+          </g>
+        </svg>
+      </div>
+      <h1 class="title">Loading</h1>
+      <p class="message">We're just checking your details, this should only take a few seconds</p>
+    </aside>
+  </div>
+  <footer>
+    <button id="js-loading-button">Loading</button>
+    <button id="js-success-button">Success</button>
     <p id="js-animation-message"></p>
-  </aside>
+  </footer>
   <script src="./scripts.js" charset="utf-8"></script>
 </body>
 </html>
