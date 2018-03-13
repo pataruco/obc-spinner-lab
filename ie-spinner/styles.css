@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  --svg-radius: 24;
+  /* Set the value of dasharray to be the length of the circumference */
+  /* 2 * π * Radius  = C */
+  --stroke-dasharray: calc((2 * var(--svg-radius)) * 3.14 );
+  /* Remove a percentage value from circumference */
+  /* C * (1 - 0.75) =  circle - 25% */
+  --stroke-dashoffset: calc(var(--stroke-dasharray) * (1 - 0.75));
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* IE Spinner */
+.svgWrapper {
+  width: 200px;
+  min-height: 200px;
+  position: relative;
+}
+
+.circleSvg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  stroke: red;
+  stroke-width: 3;
+  /* stroke-dashoffset: var(--stroke-dashoffset); */
+  stroke-dashoffset: 37.68px;
+  /* stroke-dasharray: var(--stroke-dasharray); */
+  stroke-dasharray: 150.72px;
+  fill:none;
+  animation: rotate 1s linear infinite;
+}
+
+.checkmarkSvg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  stroke: transparent;
+  stroke-width: 3;
+  stroke-dashoffset: 50;
+  stroke-dasharray: 50;
+  fill:none;
+  animation: rotate 1s linear infinite;
+}
+
+/*Success*/
+
+.svgWrapper.success .circleSvg circle {
+  animation: fullcircle 1s ease-in forwards;
+}
+
+.svgWrapper.success .checkmarkSvg {
+  animation: checkmark 1s ease-in 1s forwards;
+}
+
+
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes fullcircle {
+  50% {
+    stroke: green;
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke: transparent;
+  }
+
+  to {
+    stroke: transparent;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes checkmark {
+  to{
+    stroke: green;
+    stroke-dashoffset: 0;
+  }
+}
